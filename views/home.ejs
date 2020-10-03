@@ -1,0 +1,37 @@
+<%- include('./partials/header') %>
+<body>
+
+<div class="container">
+    <div class="row">
+        <div class="col-12 col-center">
+            <%- include('./partials/title') %>
+            <h2>links</h2>
+            <div class="element">
+                <a href="https://github.com/bradenn" target="_blank">github</a>
+                <div>GitHub is a repository hosting service. I use it to store and manage opensource programming projects.</div>
+            </div>
+            <div class="element">
+                <a href="https://hub.docker.com/u/bradenn" target="_blank">docker</a>
+                <span>Due to the limitations of docker's free account, most of the images I've made are not stored on docker.</span>
+                <div>Docker is a container platform that stores images in a similar format to GitHub.</div>
+            </div>
+            <div class="element">
+                <a href="https://utils.bradenn.com" target="_blank">utils (wip)</a>
+                <span>This service in down for extended maintenance.</span>
+                <div>A collection of tools I've created over the years to complete trivial tasks.</div>
+            </div>
+            <h2>projects</h2>
+            <% repos.map(doc => { %>
+                <div class="element">
+                    <h3><%= doc.name %></h3>
+                    <span><%= doc.language %></span>
+                    <div><%= doc.description %></div>
+                </div>
+            <% }) %>
+        </div>
+    </div>
+</div>
+
+</body>
+
+<%- include('./partials/footer') %>
