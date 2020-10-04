@@ -1,36 +1,68 @@
 <%- include('./partials/header') %>
 <body>
 
-<div class="container">
-    <div class="row">
-        <div class="col-12 col-center">
-            <%- include('./partials/title') %>
-            <h2>links</h2>
-            <div class="element">
-                <a href="https://github.com/bradenn" target="_blank">github</a>
-                <div>GitHub is a repository hosting service. I use it to store and manage opensource programming projects.</div>
-            </div>
-            <div class="element">
-                <a href="https://hub.docker.com/u/bradenn" target="_blank">docker</a>
-                <span>Due to the limitations of docker's free account, most of the images I've made are not stored on docker.</span>
-                <div>Docker is a container platform that stores images in a similar format to GitHub.</div>
-            </div>
-            <div class="element">
-                <a href="https://utils.bradenn.com" target="_blank">utils (wip)</a>
-                <span>This service in down for extended maintenance.</span>
-                <div>A collection of tools I've created over the years to complete trivial tasks.</div>
-            </div>
-            <h2>projects</h2>
-            <% repos.map(doc => { %>
-                <div class="element">
-                    <h3><%= doc.name %></h3>
-                    <span><%= doc.language %></span>
-                    <div><%= doc.description %></div>
-                </div>
-            <% }) %>
+<div class="col-center">
+    <%- include('./partials/title') %>
+    <h2>links</h2>
+    <div class="element">
+        <a href="https://github.com/bradenn" target="_blank">github</a>
+        <div>GitHub is a repository hosting service. I use it to store and manage opensource programming projects.</div>
+    </div>
+    <div class="element">
+        <a href="https://hub.docker.com/u/bradenn" target="_blank">docker</a>
+        <span>Due to the limitations of docker's free account, most of the images I've made are not stored on docker.</span>
+        <div>Docker is a container platform that stores images in a similar format to GitHub.</div>
+    </div>
+    <div class="element">
+        <a href="https://utils.bradenn.com" target="_blank">utils (wip)</a>
+        <span>This service in down for extended maintenance.</span>
+        <div>A collection of tools I've created over the years to complete trivial tasks.</div>
+    </div>
+    <h2>projects</h2>
+    <div class="element">
+        <h3><a href="https://github.com/bradenn/turnin" target="_blank">turnin</a></h3>
+        <span>Node: Express, Mongoose, EJS</span>
+        <div>Turnin is a webapp made with Node to compile, run, and grade C++ programming assignments.</div>
+    </div>
+    <div class="element">
+        <h3><a href="https://github.com/bradenn/syndicate-user" target="_blank">syndicate-user</a></h3>
+        <span>Node: Express, Mongoose</span>
+        <div>Syndicate::User is part of a microservice boilerplate collection, unfortunately, some of the other services have licenses that conflict with opensource.</div>
+    </div>
+    <div class="element">
+        <h3><a href="https://github.com/bradenn/syndicate-engine" target="_blank">syndicate-engine</a></h3>
+        <span>Node: Express</span>
+        <div>Syndicate::Engine was originally the gateway microservice for the syndicate boilerplate.</div>
+    </div>
+    <div class="element">
+        <h3><a href="https://github.com/bradenn/space-go-api" target="_blank">space-go-api</a></h3>
+        <span>Go: gin</span>
+        <div>This is an API made in go that serves information about the galaxy. The data was adapted from edsm.net. Although gin was a helpful framework, I no longer use it in favor of chi.</div>
+    </div>
+    <div class="element">
+        <h3><a href="https://github.com/bradenn/space-go-api" target="_blank">opennut</a></h3>
+        <span>Node: Express, Mongoose, EJS</span>
+        <div>Believe it or not, this is the 4th porn site I've made. I never had any intention of publicly launching it. Just a unique prompt that forces you to think outside the box.</div>
+    </div>
+    <h2>opensource</h2>
+    <div class="element">
+        <h3 class="desc">personal projects</h3>
+        <span>Almost always open source</span>
+        <div>I think that it is important for developers to make their personal projects opensource.
+             Having an ever expanding public repository of your work forces you to keep your projects clean and secure.
+             I try to keep most of my projects opensource, but sometimes it isn't feasible.
+             Right now I have about 63 repositories on my github, of those, only 38 are public.
+        </div>
+    </div>
+    <h2>attributions</h2>
+    <div class="element">
+        <a href="https://github.com/atom/atom/tree/master/packages/one-dark-syntax" target="_blank">colors</a>
+        <span>Atom One Dark</span>
+        <div>The color scheme for this website is loosely adapted from the open source color scheme atom-one-dark, bundled with the Atom editor.
         </div>
     </div>
 </div>
+
 
 </body>
 

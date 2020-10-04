@@ -23,6 +23,8 @@ html {
 
     --ac: hsl(220, 100%, 66%);
 
+    font-family: sans-serif;
+    line-height: 1.15;
 }
 
 root {
@@ -30,14 +32,26 @@ root {
     font-weight: 400;
 }
 
+*, ::after, ::before {
+    box-sizing: border-box;
+}
+
 body {
-    margin-bottom: 25vh;
+    margin: 0;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+
     background-color: var(--bg) !important;
     color: var(--fg) !important;
 }
 
 .col-center {
-    margin-top: 8vh;
+    margin: 4vh auto;
+    padding: 0 1em;
+    max-width: 1100px;
+
 }
 
 .line {
@@ -63,12 +77,25 @@ body {
     }
 }
 
+.muted{
+    color: var(--mono-1);
+    font-family: 'Fira Code', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    background-color: transparent;
+}
+
 h1 {
     color: var(--hue-2);
     font-size: 2.5em !important;
     font-family: 'Fira Code', sans-serif;
-    font-weight: 700;
-    margin-bottom: 24px !important;
+    font-weight: 500;
+    margin-top: 0;
+    line-height: 1.2;
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
 }
 
 h2 {
@@ -84,12 +111,21 @@ h2 {
     margin-left: 1em;
 }
 
+.element > h3.desc{
+    color: var(--hue-5) !important;
+}
 .element > a{
     display: block;
     color: var(--hue-3) !important;
     font-family: 'Fira Code', sans-serif;
     font-size: 1.25em !important;
     font-weight: 500;
+    margin-bottom: 0;
+}
+
+.element > h3 > a {
+    color: var(--hue-4);
+    font-family: 'Fira Code', sans-serif;
     margin-bottom: 0;
 }
 

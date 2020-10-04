@@ -1,7 +1,9 @@
 const express = require('express');
 const app = express();
-const dotenv = require('dotenv');
-dotenv.config();
+if (process.env.NODE_ENV !== "production") {
+    const dotenv = require('dotenv');
+    dotenv.config();
+}
 
 app.set('view engine', 'ejs');
 app.use(express.static('public'))
