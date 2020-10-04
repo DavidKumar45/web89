@@ -36,6 +36,8 @@ For something this small, setting up ci may seem trivial. It is. You can at leas
 Here is my GitHub Action workflow.
 [.github/workflows/docker-image.yml](https://github.com/bradenn/website/blob/master/.github/workflows/docker-image.yml)
 
+## Considerations
+Why not just a single html file? That is a wonderful question. With the way I have all of my servers configured, I don't really have a way to serve an HTML file without using more resources than express.
 
 ## License
 [mpl-2.0](https://choosealicense.com/licenses/mpl-2.0/)
