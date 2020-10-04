@@ -22,10 +22,19 @@ nodemon app.js
 
 ## Running In Production
 I recommend using docker if you have access, even for such a lightweight project.
-### Build your container
+### Build Your Container
 ```shell script
-docker build . -t [your-name-space]/[your-image-name]:[version] # You can tag it seperatly if needed
+docker build . -t [your-name-space]/[your-image-name]:[version]
 ```
+### Push Your Container
+Make sure you are logged in first, then push to Docker hub
+```shell script
+docker push [your-name-space]/[your-image-name]:[version]
+```
+### Considering CI
+For something this small, setting up ci may seem trivial. It is. You can at least setup github to build your image.
+Here is my GitHub Action workflow.
+[.github/workflows/docker-image.yml](https://github.com/bradenn/website/blob/master/.github/workflows/docker-image.yml)
 
 
 ## License

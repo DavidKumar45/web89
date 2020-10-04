@@ -7,6 +7,7 @@ if (process.env.NODE_ENV !== "production") {
 
 app.set('view engine', 'ejs');
 app.use(express.static('public'))
+app.get('/status', (req, res) => res.status(200).send('ok'))
 app.use(require('./routes'));
 
 app.listen(process.env.PORT, () => console.log(`Started server. Listening on ${process.env.PORT}`));
